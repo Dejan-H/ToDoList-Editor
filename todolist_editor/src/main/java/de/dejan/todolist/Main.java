@@ -1,11 +1,6 @@
 package de.dejan.todolist;
 
-import java.util.Scanner;
 
-/**
- * Hello world!
- *
- */
 public class Main{
     public static void main( String[] args ){
         String[] tasks=new String[10];
