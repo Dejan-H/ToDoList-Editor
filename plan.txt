@@ -5,3 +5,5 @@ Funktionen:
 -ToDo auflisten#
 -ToDo-Liste abspeichern
 -
+-
+-über Jarvis neue Einträge hinzufügen
