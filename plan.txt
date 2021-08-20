@@ -1,0 +1,6 @@
+Funktionen:
+-ToDo hinzufügen#
+-ToDo abhaken
+-ToDo löschen
+-ToDo auflisten#
+-ToDo-Liste abspeichern
