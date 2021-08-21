@@ -1,5 +1,6 @@
 .git
 .vscode
+build-jar
 
 todolist_editor/.settings
 todolist_editor/target

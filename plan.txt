@@ -2,7 +2,7 @@ Funktionen:
 -ToDo hinzufügen#
 -ToDo abhaken#
 -ToDo deadline
--ToDo löschen
+-ToDo löschen#
 -ToDo auflisten#
 -ToDo-Liste abspeichern
 -

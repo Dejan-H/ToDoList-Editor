@@ -6,6 +6,7 @@
 
   <groupId>de.dejan.todolist</groupId>
   <artifactId>todolist_editor</artifactId>
+  
   <version>0.1</version>
 
   <name>todolist_editor</name>
