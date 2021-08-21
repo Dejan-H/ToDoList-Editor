@@ -6,7 +6,6 @@ import java.util.*;
 
 public class Main{
 
-    static int taskID=0;
     static ArrayList<ToDo> tasks=new ArrayList<ToDo>();
 
     public static void main( String[] args ){
@@ -15,43 +14,64 @@ public class Main{
             menu();
         }
         
-
     }
 
     public static void menu(){
 
         System.out.println("\n[1]Neues ToDo hinzufügen");
         System.out.println("[2]ToDos auflisten");
-        System.out.println("[3]Beenden");
+        System.out.println("[3]ToDo abhaken");
+        System.out.println("[4]ToDo löschen");
+        System.out.println("[5]Beenden");
+        System.out.print(">>>");
 
         int in=Integer.parseInt(System.console().readLine());
 
         switch (in) {
             case 1: newTask(); break;
             case 2: listToDo(); break;
-            case 3: System.exit(0);
+            case 3: done(); break;
+            case 4: delTask(); break;
+            case 5: System.exit(0);
         }
 
     }
 
     public static void newTask(){
-
         System.out.println("\nAufgabe hinzufügen:");
 
         String in=System.console().readLine();
 
-        ToDo task=new ToDo(taskID, in);
+        ToDo task=new ToDo(tasks.size(), in, false);
         tasks.add(task);
-        taskID++;
         return;
     }
 
     public static void listToDo(){
         System.out.println("\n\nToDo:");
         System.out.println("=====");
+        System.out.println("Nr. | ToDo | erledigt");
         for (int i = 0; i < tasks.size(); i++) {
-            System.out.println("["+tasks.get(i).theId+"] "+tasks.get(i).theContent);
+            char done_;
+            if (tasks.get(i).getDone()) {
+                done_='Y';
+            }else{
+                done_='N';
+            }
+            System.out.println("["+tasks.get(i).theId+"] "+tasks.get(i).theContent+" ["+done_+"]");
         }
+    }
+
+    public static void done(){
+        listToDo();
+        System.out.print("ToDo-Nr. eingeben zum Abhaken:");
+        tasks.get(Integer.parseInt(System.console().readLine())).setDone(true);;
+    }
+
+    public static void delTask(){
+        listToDo();
+        System.out.print("ToDo-Nr. eingeben zum löschen:");
+        tasks.remove(Integer.parseInt(System.console().readLine()));
     }
 
 }
