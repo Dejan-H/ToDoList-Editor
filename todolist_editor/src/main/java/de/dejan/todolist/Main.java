@@ -20,7 +20,7 @@ public class Main{
 
         System.out.println("\n[1]Neues ToDo hinzufügen");
         System.out.println("[2]ToDos auflisten");
-        System.out.println("[3]ToDo abhaken");
+        System.out.println("[3]ToDo abhaken/als nicht erledigt markieren");
         System.out.println("[4]ToDo löschen");
         System.out.println("[5]Beenden");
         System.out.print(">>>");
@@ -58,14 +58,21 @@ public class Main{
             }else{
                 done_='N';
             }
-            System.out.println("["+tasks.get(i).theId+"] "+tasks.get(i).theContent+" ["+done_+"]");
+            System.out.println("["+tasks.get(i).getID()+"] "+tasks.get(i).getContent()+" ["+done_+"]");
         }
     }
 
     public static void done(){
         listToDo();
         System.out.print("ToDo-Nr. eingeben zum Abhaken:");
-        tasks.get(Integer.parseInt(System.console().readLine())).setDone(true);;
+        int d=Integer.parseInt(System.console().readLine());
+        if (tasks.get(d).getDone()) {
+            tasks.get(d).setDone(false);
+        } else {
+            tasks.get(d).setDone(true);
+        }
+
+        
     }
 
     public static void delTask(){
