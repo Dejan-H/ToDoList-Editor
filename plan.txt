@@ -1,10 +1,12 @@
 Funktionen:
+-ToDo deadline#
+-ToDo-Liste nach Datum/Uhrzeit sortieren#
+-ToDo-Liste abspeichern
 -ToDo hinzufügen#
 -ToDo abhaken#
--ToDo deadline
 -ToDo löschen#
 -ToDo auflisten#
--ToDo-Liste abspeichern
+
 -
 -
 -über Jarvis neue Einträge hinzufügen
