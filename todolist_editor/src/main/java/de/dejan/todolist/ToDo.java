@@ -4,59 +4,59 @@ import java.util.*;
 
 public class ToDo{
     
-    private int theID;
-    private String theContent;
-    private boolean theDone;
+    private int id;
+    private String content;
+    private boolean done;
     
     // https://docs.oracle.com/javase/8/docs/api/java/util/Date.html
     // https://stackoverflow.com/questions/5927109/sort-objects-in-arraylist-by-date
-    private Date theDeadline;
+    private Date deadline;
 
 
     public ToDo(int id, String content, boolean done, Date deadline){
-        theID=id;
-        theContent=content;
-        theDone=done;
-        theDeadline=deadline;
+        this.id=id;
+        this.content=content;
+        this.done=done;
+        this.deadline=deadline;
     }
 
     public ToDo(int id, String content, boolean done){
-        theID=id;
-        theContent=content;
-        theDone=done;
+        this.id=id;
+        this.content=content;
+        this.done=done;
     }
 
     //get-& set-methods
     public void setID(int id){
-        theID=id;
+        this.id=id;
     }
 
     public int getID(){
-        return theID;
+        return id;
     }
 
     public void setContent(String content){
-        theContent=content;
+        this.content=content;
     }
 
     public String getContent(){
-        return theContent;
+        return this.content;
     }
 
     public void setDone(boolean done){
-        theDone=done;
+        this.done=done;
     }
 
     public boolean getDone(){
-        return theDone;
+        return this.done;
     }
 
     public void setDeadline(Date d){
-        theDeadline=d;
+        this.deadline=d;
     }
 
     public Date getDeadline(){
-        return theDeadline;
+        return this.deadline;
     }
 
 }

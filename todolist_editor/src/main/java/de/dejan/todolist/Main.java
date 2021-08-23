@@ -4,6 +4,8 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
+import de.dejan.todolist.io.ToDoListFromToJSON;
+
 
 
 public class Main{
@@ -11,11 +13,22 @@ public class Main{
     static ArrayList<ToDo> tasks=new ArrayList<ToDo>();
 
     public static void main( String[] args ){
+
+        //ArrayList<ToDo> tasks_ = ToDoListFromToJSON.loadToDoList("theList.json");
+
+        for (int i = 0; i < ToDoListFromToJSON.loadToDoList("theList.json").size(); i++) {
+            tasks.add(ToDoListFromToJSON.loadToDoList("theList.json").get(i));
+        }
         
         while (true) {
             menu();
         }
         
+    }
+
+    public static void exit(){
+        ToDoListFromToJSON.saveToDoList(tasks, "theList.json");
+        System.exit(0);
     }
 
     public static void menu(){
@@ -36,7 +49,7 @@ public class Main{
             case 3: done(); break;
             case 4: delTask(); break;
             case 5: sortByDeadline(); break;
-            case 6: System.exit(0);
+            case 6: exit();
         }
 
     }

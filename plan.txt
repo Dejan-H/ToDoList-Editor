@@ -1,7 +1,8 @@
 Funktionen:
 -ToDo deadline#
 -ToDo-Liste nach Datum/Uhrzeit sortieren#
--ToDo-Liste abspeichern
+-ToDo-Liste als JSON abspeichern#
+-ToDo-Liste von JSON laden#
 -ToDo hinzufügen#
 -ToDo abhaken#
 -ToDo löschen#
